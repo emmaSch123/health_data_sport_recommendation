@@ -1,9 +1,10 @@
 # health_data_sport_recommendation
 
-Objectif : Analyser et filtrer la base de données du réseau social Endomondo, utilisé pour le suivi des performances chez les sportifs de tout types. Le projet vise à identifier les critères pour trier ou filtrer les données sportives, et à choisir des algorithmes optimaux pour l'implémentation et l'amélioration de la précision de nos résultats. Ce modèle d'apprentissage automatique pourrait par exemple servir à des coachs ou à des médecins pour surveiller la fréquence cardiaque de sportifs de haut niveau ou de malades.
+Objectif : Mise en oeuvre d’un système de recommandation qui permet de prédire les meilleures activités sportives à partir de la base de données d’un réseau social appelé
+Endomondo. L’application possède de multiples sources de données tels que des capteurs présents dans le téléphone de l’utilisateur, des capteurs de température et d’humidité, ou des capteurs de pouls.
 
-Observations : Transformation des données brutes issues de la base de données en un format exploitable pour l'analyse, en se concentrant sur les variables clés liées à la performance sportive.
+Traitement et Analyse de la donnée :
+• Corrélations entre les valeurs ‘durée’ et ‘distance’ → le modèle d'apprentissage automatique pourra utiliser ces données pour ses prédictions.
+• Création d’une nouvelle colonne ‘duration’ qui prend, pour chaque ligne, la différence entre le dernier timestamp et le premier timestamp afin d’établir la durée en secondes pour chaque activité.
 
-Les valeurs ‘durée’ et ‘distance’ sont très corrélées donc le modèle d'apprentissage automatique pourra utiliser ces données pour faire des prédictions plus facilement.
-
-Résultats : Les algorithmes 'Random Forest Classifier', 'KNN Classifier', 'SVM Classifier' et 'LightGBM' ont été testés. LightGBM a montré les meilleures performances en termes de MSE, MAE et RMSE.
+Résultats : Les algorithmes 'Random Forest Classifier', 'KNN Classifier', 'SVM Classifier' et 'LightGBM' ont été testés. LightGBM a montré les meilleures performances en termes de MSE, MAE et RMSE pour une meilleure prédiction d’activités sportives à partir de la base de données d’Endomondo
